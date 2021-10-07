@@ -54,7 +54,7 @@ struct ds18sts{
 class DS18B20 {
   public:
     ds18sts dssts[DS18B20_MAXSENSORS];
-    double autoRead1Sec(char ch);
+    double autoRead1Sec(char ch);//この関数を1秒間隔で呼ぶこと
     private:
     OneWire ds[DS18B20_MAXSENSORS]={A3,A4};//センサ用のクラスをピンごとに複数生成する
     void OneWireSendStart(char ch);
